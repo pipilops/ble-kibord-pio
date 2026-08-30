@@ -1,0 +1,17 @@
+Your original Arduino sketch was:
+
+    BLE_Kibord/
+      BLE_Kibord.ino
+      EspUsbHostKeybord.h      <-- was NOT included in what you uploaded
+      EspUsbHostKeybord.cpp    <-- (if it exists - some versions are header-only)
+
+PlatformIO's "lib" folder is where per-project private libraries go.
+Copy EspUsbHostKeybord.h (and .cpp if you have one) into this folder:
+
+    ble-kibord-pio/lib/EspUsbHostKeybord/EspUsbHostKeybord.h
+    ble-kibord-pio/lib/EspUsbHostKeybord/EspUsbHostKeybord.cpp
+
+PlatformIO auto-discovers anything under lib/<name>/ and links it into the
+build automatically - no lib_deps entry needed for local/private libraries.
+
+Then delete this file.
