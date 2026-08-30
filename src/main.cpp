@@ -8,7 +8,6 @@
 
 #define RETRY_DELAY 10
 #define SLEEP_TIMEOUT 300000  // 5 minutes in milliseconds
-//asdfasdfasdfasdf
 
 BleKeyboard bleKeyboard("BLE Kibord");
 uint8_t pressedKeys[6] = {0};
